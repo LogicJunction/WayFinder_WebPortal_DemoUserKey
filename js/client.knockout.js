@@ -12,7 +12,6 @@ function ClientViewModel(){
 	self.weblink = ko.observable('http://www.logicjunction.com');
 	self.apptLink = ko.observable('#');
 	self.apptText = ko.observable('Make an appointment online today!');
-	self.mainLatLng = new google.maps.LatLng(39.740619,-75.606773);
 	self.legendArray = ko.observableArray([{source:"images/parking.png", text: 'Parking'}, 
 											{source:"images/busstop.png", text: 'Bus Stop'}, 
 											{source:"images/restroom.png", text: 'Restrooms'},
