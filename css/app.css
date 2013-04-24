@@ -1,0 +1,585 @@
+/* CSS specific to Logic Junction Wayfinding */
+html, body { height : 100%; background-color:#eee;}
+
+
+div.appHeader.ui-bar-a{background:transparent;border:0;padding:10px 10px 0;}
+div.appHeader a.logo{position:relative;}
+
+fieldset.outer{position:relative;}
+fieldset.outer#from{padding:0;}
+fieldset.outer#to{padding:0;}
+fieldset.outer legend{font-size:20px;font-weight:bold;padding:0 0 10px 0;}
+fieldset.outer#to .location-stack{min-height:8.375em;}
+
+fieldset.autocomplete {position:relative;}
+fieldset.autocomplete div.ui-input-text{margin-bottom:0;padding-bottom:0;}
+fieldset.autocomplete .ui-listview-inset, 
+fieldset.autocomplete .ui-panel-inner .ui-listview-inset{margin-bottom:0;margin-top:0;}
+fieldset.onCampusButtons{width:45%; margin:0 auto;position:relative;top:0.6em}
+fieldset.onCampusButtons .ui-icon-lj-left-arrow-green{background:transparent url(../images/ljSprite.png) no-repeat  -214px 0;width:36px;height:36px;top:26%!important;}
+
+a.getDirectionsButton{width:65%;margin:0 auto;
+	-moz-box-shadow: 0px 0px 13px 0px #9e9e9e;
+	-webkit-box-shadow: 0px 0px 13px 0px #9e9e9e;
+	box-shadow: 0px 0px 13px 0px #9e9e9e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00ca71), color-stop(1, #00b25f) );
+	background:-moz-linear-gradient( center top, #00ca71 5%, #00b25f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ca71', endColorstr='#00b25f');
+	background-color:#00ca71;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	color:#ffffff;
+	font-family:Arial;
+	
+	font-weight:normal;
+	text-decoration:none;
+}
+
+.getDirectionsButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00b25f), color-stop(1, #00ca71) );
+	background:-moz-linear-gradient( center top, #00b25f 5%, #00ca71 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00b25f', endColorstr='#00ca71');
+	background-color:#00b25f;
+}
+
+.getDirectionsButton:active { position:relative; top:1px; }
+a.getDirectionsButton .ui-btn-inner {font-size:1.5em;padding:0.3em;font-weight:normal;}
+a.getDirectionsButton .ui-btn-txt{color:#fff;}
+
+a.getDirectionsButton.ui-btn-up-a:visited, 
+a.getDirectionsButton.ui-btn-up-a a.ui-link-inherit{ color:#fff; }
+
+a.getDirectionsButton.ui-btn-hover-a:visited, 
+a.getDirectionsButton.ui-btn-hover-a:hover, 
+a.getDirectionsButton.ui-btn-hover-a a.ui-link-inherit{ color:#fff; }
+
+a.getDirectionsButton .ui-icon-lj-arrow{background:transparent url(../images/ljSprite.png) no-repeat 0 0;width:36px;height:36px;top:30%!important;}
+
+
+a.getDirectionsButton.ui-disabled{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #858585), color-stop(1, #5a5a5a) );
+	background:-moz-linear-gradient( center top, #858585 5%, #5a5a5a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#858585', endColorstr='#5a5a5a');
+	background-color:#858585;
+  opacity: .8;
+}
+
+a#directionsBtn.getDirectionsButton{top:1.4em;position:relative;}
+
+fieldset.parking {}
+fieldset.parking{padding:1.5em 0}
+fieldset.parking legend{font-weight:bold;color:#0099ff;font-size:1.4em;text-align:center;}
+fieldset.parking .ui-radio {width:80%;margin:0 auto;}
+fieldset.parking .ui-radio label{background:#fff;border:0;width:100%;margin:0;}
+fieldset.parking .ui-radio label span{background:transparent;;border:0px;width:100%;margin:0;}
+fieldset.parking .ui-radio label .ui-btn-text{color:#666666;font-weight:normal;font-size:1.2em;}
+fieldset.parking .ui-btn-icon-left > .ui-btn-inner > .ui-icon,
+fieldset.parking.radio .ui-btn-icon-right > .ui-btn-inner > .ui-icon{background:transparent url(../images/ljSprite.png) no-repeat  -71px 0;width:36px;height:38px;top:30%;left:0;
+        border-radius: 0px 0px 0px 0px; 
+        -moz-border-radius: 0px 0px 0px 0px; 
+        -webkit-border-radius: 0px 0px 0px 0px; 
+}
+
+fieldset.parking .ui-btn-icon-left > .ui-btn-inner > .ui-icon-radio-on,
+fieldset.parking .ui-btn-icon-right > .ui-btn-inner > .ui-icon-radio-on{background-position:  -143px 0!important;}
+fieldset.parking .ui-select{margin:1.5em 0.8em;}
+div#parkingpopup .getDirectionsButton{width:95%;}
+
+fieldset.onCampus {width:40%;margin:0 auto;}
+fieldset.onCampus .ui-radio label{background:#fff;;border:0;width:100%;margin:0;}
+fieldset.onCampus .ui-radio label .ui-btn-text{color:#666666;font-weight:normal;font-size:1.2em;}
+fieldset.onCampus .ui-btn-icon-left > .ui-btn-inner > .ui-icon,
+fieldset.onCampus .ui-btn-icon-right > .ui-btn-inner > .ui-icon{background:transparent url(../images/ljSprite.png) no-repeat  -71px 0;width:36px;height:36px;top:30%;left:0;
+        border-radius: 0px 0px 0px 0px; 
+        -moz-border-radius: 0px 0px 0px 0px; 
+        -webkit-border-radius: 0px 0px 0px 0px; 
+}
+
+fieldset.onCampus .ui-btn-icon-left > .ui-btn-inner > .ui-icon-radio-on,
+fieldset.onCampus .ui-btn-icon-right > .ui-btn-inner > .ui-icon-radio-on{background-position:  -143px 0!important;}
+
+div.ljContainer[style]{background-color:#fff;padding:auto;} 
+
+fieldset.outer legend.mainTitle{color:#0099ff;font-weight:bold;text-align:center;font-size:2.18em;width:100%;}
+fieldset.outer legend.mainTitle span{display:block;color:#4FB304;padding:1em 0 0 0;}
+fieldset.outer.compensateHeight{min-height:8.375em;}
+div.ljContainer h2{font-size:1.8em;margin:0.5em 0;}
+fieldset.outer label.from,
+fieldset.outer label.to{font-weight:bold;font-size:1.25em;padding:0.7em 0 0 0;}
+form fieldset label{color:#333;}
+
+div.ljContainer div.ljContainerFooter[style]{background:#fff!important;}
+div.ljContainer div.ljContainerFooter{background:#fff!important;padding:50px;width:100%;margin:0 -50px -50px;position:relative;
+        background: #f4f4f4 url(../images/ljFooterContainer_re.png) repeat-x 0 0;
+        border-radius: 0px 0px 12px 12px; 
+        -moz-border-radius: 0px 0px 12px 12px; 
+        -webkit-border-radius: 0px 0px 12px 12px; 
+
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+
+div.ljContainer span.ljSeparatorSmall{background:transparent url(../images/ljSeparator_small.png) no-repeat center center;display:block;position: relative;width: 100%; padding:25px 0;}
+div.ljContainer span.ljSeparatorSmall.map{padding:4px 0;}
+div.ljContainer span.ljSeparatorBig{background:transparent url(../images/ljSeparator_big.png) no-repeat center center;display:block;position: relative;width: 100%; padding:40px 0;}
+div.ljContainer div.ljContainerFooter span.ljSeparatorSmall{background:transparent url(../images/ljSeparator_small.png) no-repeat center top;display:block;height: 5px;position: absolute;width: 100%; top: -1px; left: 0;}
+
+div.ljContainer span.ljHelpArrow{background:transparent url(../images/ljHelpArrow.png) no-repeat 0 0;width:78px;height:95px;display:block;position:absolute;top: 60px;right: -61px;z-index: 100;}
+div.ljContainer fieldset.outer span.ljHelpArrow{top: 57px;}
+div.ljContainer #to span.ljHelpArrow{display:block;position:absolute;top: 12px;z-index: 100;}
+
+div.ljFooter{background:#efefef;padding:1em 3.125em;width:800px;margin:1em auto;
+
+  -webkit-border-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+          border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+div.ljFooter .ui-grid-b{color:#666;}
+div.ljFooter .ui-grid-b h4.company{font-weight:normal;font-size:1.3em;margin:0 0 0.5em}
+div.ljFooter .ui-grid-b address{font-size:0.9em;font-style:normal;}
+div.ljFooter .ui-grid-b dl{font-size:1em;overflow:hidden;margin:0.3em 0;}
+div.ljFooter .ui-grid-b dl dt{width:30%;float:left;margin:0;}
+div.ljFooter .ui-grid-b dl dd{width:70%;float:left;margin:0;}
+div.ljFooter .ui-grid-b a{font-weight:normal;}
+
+.location-stack{min-height:10em;position:relative;}
+/* Stack all blocks to start */
+.location-stack .ui-block-a,
+.location-stack .ui-block-b{
+  width: 100%;
+  float:none;
+}
+.location-stack.selected .ui-block-a{line-height:1.8em;font-weight:normal;}
+.location-stack.selected .ui-block-b span#foundField{font-weight:bold;}
+
+
+/* 
+ * Convert px values to ems by dividing by 16
+ * Em's are better since they are relative to font size and px are fixed
+ */
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@media print {
+}
+
+@media (max-width: 320px){
+  fieldset.onCampus {width:100%;}
+  fieldset.parking legend{font-size:1.1em;}
+
+  a.getDirectionsButton{text-align:center;width:100%;}
+  a.getDirectionsButton .ui-btn-inner{font-size:1.2em;padding:0.6em;text-align:center;}
+  div#parkingpopup .getDirectionsButton{width:100%;}
+  a.getDirectionsButton .ui-btn-inner .ui-icon,
+  div#parkingpopup .getDirectionsButton .ui-icon{display:none;}
+
+  fieldset.outer legend{font-size:0.8em;font-weight:normal;padding:0;line-height:1.3em}
+  .location-stack.selected .ui-block-a{line-height:1.3em;}
+  fieldset.outer legend.mainTitle{font-size:1.4em;}
+
+  div.ljMapPage div.ui-content{top:72px;}
+  div.ljMapPage div.ui-content .ljContainer .ljMapContainer {top:9.4em;}
+
+  div.ljMapPage dl.startend dt{width:14%;}
+  div.ljMapPage dl.startend dd{width:80%;}
+
+  fieldset.outer label.from,
+  fieldset.outer label.to{font-weight:bold;font-size:0.8em;padding:1.6em 0 0 0;}
+}
+
+@media (min-width: 321px) and (max-width: 480px){
+  a.getDirectionsButton .ui-btn-inner{font-size:1.5em;padding:0.6em;}
+  a.getDirectionsButton .ui-icon-lj-arrow{margin-top:-6px!important;}
+  #directionsBtn.getDirectionsButton .ui-btn-inner{text-align: left;padding-left: 0.5em;}
+
+  div.ljMapPage div.ui-content{top:72px;}
+  div.ljMapPage div.ui-content .ljContainer .ljMapContainer {top:9.4em;}
+
+  div#parkingpopup .getDirectionsButton{width:79%;text-align:left;font-size:1.2em;}
+  div#parkingpopup .getDirectionsButton .ui-btn-inner{font-size:1em;}
+
+  fieldset.outer legend.mainTitle{font-size:1.9em;}
+  div.ljMapPage dl.startend dt{width:14%;}
+  div.ljMapPage dl.startend dd{width:80%;}
+
+  fieldset.outer label.from,
+  fieldset.outer label.to{font-weight:bold;font-size:1em;padding:1em 0 0 0;}
+
+}
+
+@media (max-width: 480px){
+  .ui-page .ui-header .startOverButton.ui-btn{margin:20px 2px 0 0;}
+
+
+  fieldset.onCampusButtons{width:70%; margin:0 auto;}
+  fieldset.parking legend{font-size:1.1em;}
+  div.placeholderContainer img{border-top:1px solid red;}
+
+  div.ljContainer{background:#fff!important;margin:0 -15px;padding:2.8em 1em 0;}
+  #drivingdirections div.ljContainer,
+  #walkingdirections div.ljContainer{padding:0.5em 0 0;}
+
+  div.ljContainer div.ljContainerFooter{margin:0 -1em 0;padding:3em 1em;}
+
+  div.ljContainer span.ljHelpArrow,
+  div.ljContainer #to span.ljHelpArrow{display:none;}
+
+  div.ljMapPage div.ui-content{top:72px;}
+  div.ljMapPage div.ui-content .ljContainer{padding:0.5em 1em 0;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader{padding:1em 0;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader h1{display:block;font-size:1.4em;padding:0 0 0.5em;margin:0;text-align:center;}
+  div.ljMapPage div.ui-content .ljContainer .ljMapContainer {top:9.4em;}
+
+  div#lookup div.ljContainer,
+  div#data div.ljContainer{margin:0 -15px;padding-bottom:2.8em}
+  div#data div.ljContainer{padding-bottom:1em}
+  fieldset.onCampus {width:80%;}
+
+  /* Grid for inline From and To */
+  .location-stack .ui-block-a{ width: 16.5%; float:left;}
+  .location-stack .ui-block-b{ width: 83.5%; float:left;}
+
+  div.ljFooter{margin:0 -15px;width:auto;padding:1em;text-align:center;
+    -webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+            border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+  }
+  div.ljFooter .ui-grid-b .ui-block-a,
+  div.ljFooter .ui-grid-b .ui-block-b{border:0;}
+  div.ljFooter .ui-grid-b .ui-block-a .ui-body{padding:0;}
+  div.ljFooter .ui-grid-b .ui-block-b .ui-body{padding:0;}
+  div.ljFooter .ui-grid-b .ui-block-c .ui-body{padding:0;}
+
+  div.ljFooter .ui-grid-b h4.company{font-weight:normal;font-size:1.3em;margin:auto;}
+  div.ljFooter .ui-grid-b address{font-size:0.9em;font-style:normal;padding:0.5em 0 0 0;}
+  div.ljFooter .ui-grid-b a{font-weight:normal;}
+
+  div.ljFooter .ui-grid-b dl{margin:0 auto;width:12em;}
+  div.ljFooter .ui-grid-b dd{text-align:left;}
+
+  #data form{margin:0 -1em;} /* remove margin so that the table within can reach the edge of the phone screen */
+  #data form .ui-table-columntoggle-btn{margin:0 1em 0.5em 0;}
+  #data form .ui-btn.backBtn{margin:0 0 1em 1em;}
+
+  div.ljMapPage dl.startend dt{width:14%;}
+  div.ljMapPage dl.startend dd{width:80%;}
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+  .ui-page .ui-header .startOverButton.ui-btn{margin:20px 2px 0 0;}
+
+  fieldset.onCampusButtons{width:60%; margin:0 auto;}
+  div.placeholderContainer img{border-top:1px solid blue;}
+
+  div.ljContainer{background:#fff!important;margin:0 -15px;padding:2.8em 1em 0;}
+  div.ljContainer div.ljContainerFooter{margin:0 -1em 0;padding:3em 1em;}
+
+  #drivingdirections div.ljContainer,
+  #walkingdirections div.ljContainer{padding:0.5em 0 0;}
+
+  fieldset.outer legend.mainTitle{font-size:1.9em;}
+  div.ljContainer span.ljHelpArrow,
+  div.ljContainer #to span.ljHelpArrow{display:none;}
+
+  div.ljMapPage div.ui-content{top:72px;}
+  div.ljMapPage div.ui-content .ljContainer{padding:0.5em 1em 0;}
+  div#drivingdirections .ljMapPage div.ui-content div.ljContainer,
+  div#walkingdirections.ljMapPage div.ui-content div.ljContainer{padding:0.5em 0 0;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader{padding:1em 0;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader h1{display:block;font-size:1.4em;padding:0;margin:0;text-align:center;}
+  div.ljMapPage div.ui-content .ljContainer div.mapNav{width:100%;float:none;padding:0.5em 0 0;text-align:center;}
+  div.ljMapPage div.ui-content .ljContainer .ljMapContainer {top:9.4em;}
+
+  div#lookup div.ljContainer,
+  div#data div.ljContainer{margin:0 -15px;padding-bottom:2.8em}
+  div#data div.ljContainer{padding-bottom:1em}
+  fieldset.onCampus {width:52%;}
+
+  /* Grid for inline From and To */
+  .location-stack .ui-block-a{ width: 13.5%; float:left;}
+  .location-stack .ui-block-b{ width: 86.5%; float:left;}
+
+  div.ljFooter{margin:0 -15px;width:auto;padding:1em;text-align:center;
+    -webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+            border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+  }
+
+  div.ljFooter .ui-grid-b .ui-block-a,
+  div.ljFooter .ui-grid-b .ui-block-b,
+  div.ljFooter .ui-grid-b .ui-block-c{border:0;width:100%;}
+  div.ljFooter .ui-grid-b .ui-block-a .ui-body{padding:0;}
+  div.ljFooter .ui-grid-b .ui-block-b .ui-body{padding:0;}
+  div.ljFooter .ui-grid-b .ui-block-c .ui-body{padding:0;}
+
+  div.ljFooter .ui-grid-b h4.company{font-weight:normal;font-size:1.3em;margin:auto;}
+  div.ljFooter .ui-grid-b address{font-size:0.9em;font-style:normal;padding:0.5em 0 0 0;}
+  div.ljFooter .ui-grid-b a{font-weight:normal;}
+
+  div.ljFooter .ui-grid-b dl{margin:0 auto;width:12em;}
+  div.ljFooter .ui-grid-b dd{text-align:left;}
+
+  #data form{margin:0 -1em;} /* remove margin so that the table within can reach the edge of the phone screen */
+  #data form .ui-table-columntoggle-btn{margin:0 1em 0.5em 0;}
+  #data form .ui-btn.backBtn{margin:0 0 1em 1em;}
+
+  div.ljMapPage dl.startend dt{width:10%;}
+  div.ljMapPage dl.startend dd{width:85%;}
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+  fieldset.onCampusButtons{width:40%; margin:0 auto;}
+  div.placeholderContainer img{border-top:1px solid yellow;}
+
+  div.ljContainer{background:#fff!important;padding:50px;margin:0 auto;width:auto;
+
+  -webkit-border-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+          border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -webkit-background-clip: padding-box; background-clip: padding-box;
+
+  -webkit-box-shadow: 0px 0px 10px 0px  #666 ; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+          box-shadow: 0px 0px 10px 0px  #666 ; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+  }
+  div.ljMapPage div.ui-content{top:98px;}
+
+  div.ljMapPage div.ui-content .ljContainer{padding:0.5em 0 0 0;margin:0 15px;width:auto;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader{padding:1em;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader h1{display:inline;font-size:1.6em}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader .ui-btn{margin-top:0;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader span.currentStep{line-height:2em;}
+  div.ljMapPage div.ui-content .ljContainer div.mapNav{width:60%;float:right;text-align:right;}
+  div#driving.ljMapPage div.ui-content .ljContainer div.mapNav,
+  div#drivingdirections.ljMapPage div.ui-content .ljContainer div.mapNav{width:20%;}
+  div.ljMapPage div.ui-content .ljContainer .ljMapContainer {top:11.6em;}
+
+  div.appHeader{margin:0 auto;width:auto;padding:0 1em}
+  div.appHeader.ui-bar-a{background:transparent;border:0;padding:10px 18px 0!important;}
+  div.appHeader.ui-bar-a .startOverButton.ui-btn{margin:35px 10px 0 0;}
+
+  /* Grid for inline From and To */
+  .location-stack .ui-block-a{ width: 9.5%; float:left;}
+  .location-stack .ui-block-b{ width: 89.5%; float:left;}
+
+
+
+  div.ljFooter{background:#efefef;padding:1em;width:auto;margin:1em auto;
+
+    -webkit-border-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+    border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+    /* useful if you don't want a bg color from leaking outside the border: */
+    -webkit-background-clip: padding-box; background-clip: padding-box;
+  }
+
+  div.ljFooter .ui-grid-b .ui-block-a,
+  div.ljFooter .ui-grid-b .ui-block-b{border-right:2px solid #777;}
+  div.ljFooter .ui-grid-b .ui-block-a .ui-body{padding-left:0;}
+  div.ljFooter .ui-grid-b .ui-block-b .ui-body{padding-left:47px;padding-right:20px;}
+  div.ljFooter .ui-grid-b .ui-block-c .ui-body{padding-right:0;text-align:center;}
+  div.ljFooter .ui-grid-b .ui-block-c .ui-body{padding: 1em 4.3em;}
+}
+
+/* #### Desktops 1024px min #### */
+@media (min-width: 1024px){
+  div.ui-content{overflow-x:visible;}
+
+  ul.autocompleteSuggestions{position:absolute;width:100%;z-index:5;}
+  div.placeholderContainer img.placehold{border-top:1px solid red;}
+
+  div.ljFooter .ui-grid-b .ui-block-a,
+  div.ljFooter .ui-grid-b .ui-block-b{border-right:2px solid #777;}
+  div.ljFooter .ui-grid-b .ui-block-a .ui-body{padding-left:0;}
+  div.ljFooter .ui-grid-b .ui-block-b .ui-body{padding-left:47px;padding-right:20px;}
+  div.ljFooter .ui-grid-b .ui-block-c .ui-body{padding-right:0;text-align:center;}
+  div.ljFooter .ui-grid-b .ui-block-c .ui-body{padding: 1em 4.3em;}
+
+  div.ljContainer{background:#fff!important;padding:50px;margin:0 auto;width:800px;
+
+  -webkit-border-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+          border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -webkit-background-clip: padding-box; background-clip: padding-box;
+
+  -webkit-box-shadow: 0px 0px 10px 0px  #666 ; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+          box-shadow: 0px 0px 10px 0px  #666 ; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+
+  }
+  div.ljMapPage div.ui-content{top:98px;}
+  div.ljMapPage div.ui-content .ljContainer{width:900px;padding:0.5em 0 0 0;}
+
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader{padding:1em;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader h1{display:inline;font-size:1.6em}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader .ui-btn{margin-top:0;}
+  div.ljMapPage div.ui-content .ljContainer div.mapHeader span.currentStep{line-height:2em;}
+  div.ljMapPage div.ui-content .ljContainer div.mapNav{width:50%;float:right;text-align:right;}
+  div#driving.ljMapPage div.ui-content .ljContainer div.mapNav,
+  div#drivingdirections.ljMapPage div.ui-content .ljContainer div.mapNav{width:20%;}
+
+  div.ljMapPage div.ui-content .ljContainer .ljMapContainer {top:11.5em;}
+
+  div.appHeader{margin:0 auto;width:900px;}
+
+
+  /* Grid for inline From and To */
+  .location-stack .ui-block-a{ width: 9.5%; float:left;}
+  .location-stack .ui-block-b{ width: 89.5%; float:left;}
+
+}
+
+
+
+/* #### Mobile Phones Portrait max 320px #### */
+@media screen and (max-device-width: 20em) and (orientation: portrait){
+  div.placeholderContainer img.placehold{border-top:1px solid green;}
+}
+
+/* #### Mobile Phones Portrait max 480px #### */
+@media screen and (max-device-width: 30em) and (orientation: portrait){
+  div.placeholderContainer img.placehold{border-top:1px solid blue;}
+}
+
+/* #### Mobile Phones Landscape max 640px landscape #### */
+@media screen and (max-device-width: 40em) and (orientation: landscape){ 
+  div.placeholderContainer img.placehold{border-top:1px solid yellow;}
+}
+
+/* #### Mobile Phones Portrait or Landscape max 640px portrait #### */
+@media screen and (max-device-width: 40em){ 
+  div.placeholderContainer img.placehold{border-top:1px solid black;}
+}
+
+/* #### iPhone 4+ Portrait or Landscape max 480px pixel ratio 2 #### */
+@media screen and (max-device-width: 30em) and (-webkit-min-device-pixel-ratio: 2){ 
+  div.placeholderContainer img.placehold{border-top:1px solid white;}
+}
+
+/* #### Tablets Portrait or Landscape min 768px max 1024px #### */
+@media screen and (min-device-width: 48em) and (max-device-width: 64em){ 
+
+}
+
+/* #### Desktops 1024px min #### */
+@media screen and (min-width: 64em){ 
+  /* some CSS here */
+
+
+}
+
+/* google map page adjustments */
+/*
+#driving{height:100%;}
+#driving div.appHeader{}
+#driving .ui-content{position:absolute;top:98px;bottom:5px;left:0;right:0;}
+#driving .ui-content .ljContainer{position:absolute;top:5px;bottom:5px;left:0;right:0;padding:1em 0;}
+#driving .ui-content .ljContainer .ljMapContainer #map_canvas{width:100%;height:100%;}
+#driving .ui-content .ljContainer .ljMapContainer{position:absolute;top:9.34em;bottom:1.2em;left:0;right:0;padding:0;border:1px solid #ccc}
+
+#walking{height:100%;}
+#walking .ui-content{position:absolute;top:98px;bottom:5px;left:0;right:0;}
+#walking .ui-content .ljContainer{position:absolute;top:5px;bottom:5px;left:0;right:0;padding:1em 0;}
+#walking .ui-content .ljContainer .ljMapContainer{position:absolute;top:11.5em;bottom:1.2em;left:0em;right:0;padding:0;}
+#walking #SVGBox{width:100%;height:100%;}
+
+
+#drivingdirections .ui-content .ljContainer,
+#walkingdirections .ui-content .ljContainer{padding:1em 0;width:900px;}
+#drivingdirections .ui-content .ljContainer .ljDirectionsContainer,
+#walkingdirections .ui-content .ljContainer .ljDirectionsContainer{margin:0 0 -1em;padding:1em;width:auto;}
+#drivingdirections div.ljContainer span.ljSeparatorSmall.map,
+#walkingdirections div.ljContainer span.ljSeparatorSmall.map{padding:4px 0;margin:0 0 -3px 0;}
+*/
+
+div.ljMapPage .ui-panel-content-wrap{overflow:hidden;}
+div.ljMapPage div.ui-header.appHeader{position:relative;}
+div.ljMapPage div.ui-content{position:absolute;bottom:5px;left:0;right:0;}
+div#drivingdirections.ljMapPage div.ui-content,
+div#walkingdirections.ljMapPage div.ui-content{position:static;bottom:0;}
+div#drivingdirections.ljMapPage div.ui-content .ljContainer,
+div#walkingdirections.ljMapPage div.ui-content .ljContainer{position:static;top:0;bottom:0;left:0;right:0;}
+div#drivingdirections.ljMapPage div.ui-content .ljContainer .ljMapContainer,
+div#walkingdirections.ljMapPage div.ui-content .ljContainer .ljMapContainer {position:static;bottom:0;}
+
+div.ljMapPage div.ui-content .ljContainer{position:absolute;top:5px;bottom:5px;left:0;right:0;}
+div.ljMapPage div.ui-content .ljContainer #SVGBox{position:absolute;top:11em;bottom:0.7em;left:0;right:0;padding:0.5em 0 0 0;}
+div.ljMapPage div.ui-content .ljContainer .ljMapContainer {position:absolute;bottom:0.7em;left:0em;right:0;padding:0;}
+div.ljMapPage div.ui-content .ljContainer .ljMapContainer #map_canvas{width:100%;height:100%;}
+
+div.ljMapPage div.ui-content .ljContainer .ljNavBar .ui-btn-active{border-bottom:1px solid #009de0;}
+div.ljMapPage div.ui-content .ljContainer div.mapHeader{background:#009de0;overflow:hidden;}
+div.ljMapPage div.ui-content .ljContainer div.mapHeader h1{color:#fff;text-shadow: 1px 1px 4px #000;}
+div.ljMapPage div.ui-content .ljContainer div.mapHeader .ui-btn{margin-top:0;}
+div.ljMapPage div.ui-content .ljContainer div.mapHeader span.currentStep{color:#fff;text-shadow: 1px 1px 1px #000;}
+div.ljMapPage div.ui-content .ljContainer div.mapHeader a#previousButton.ui-disabled{opacity:0;}
+div.ljMapPage div.ui-content .ljContainer div.mapNav{}
+
+div.ljMapPage div.ui-content .ljContainer .ljDirectionsContainer{padding:0.5em 3.125em;}
+div.ljMapPage div.ui-content .ljContainer .ljDirectionsContainer #directionsPanel{margin:0 -3.125em;}
+div.ljMapPage div.ui-content .ljContainer .ljDirectionsContainer #directionsPanel div.adp-summary{margin-left:1em;}
+div.ljMapPage div.ui-content .ljContainer .ljDirectionsContainer #directionsPanel table.adp-directions{margin-right:1em; width:97%; margin-left:1em;}
+div.ljMapPage div.ui-content .ljContainer .ljDirectionsContainer #directionsPanel div.adp-legal{padding: 0 1em;}
+div.placeholderContainer{position:absolute;left:0;bottom:0px;}
+div.placeholderContainer img.placehold{position:relative;display:block;}
+div#printable table.adp-directions{width:100%;}
+
+ol.directions li{color:#696969;padding:20px 0 20px 75px;}
+ol.directions li.right{background:transparent url(../images/BulletIcon_TurnRight.png) no-repeat 10px 8px;}
+ol.directions li.left{background:transparent url(../images/BulletIcon_LeftTurn.png) no-repeat 10px 8px;}
+ol.directions li.straight{background:transparent url(../images/BulletIcon_Straight.png) no-repeat 10px 8px;}
+ol.directions li.elevator{background:transparent url(../images/BulletIcon_Elevator.png) no-repeat 10px 8px;}
+ol.directions li.start{background:transparent url(../images/BulletIcon_Start.png) no-repeat 10px 8px;}
+ol.directions li.end{background:transparent url(../images/BulletIcon_End.png) no-repeat 10px 8px;}
+ol.directions li.parking{background:transparent url(../images/BulletIcon_parking.png) no-repeat 10px 8px;}
+
+ul.legendList {list-style-type: none; margin:0px; padding:2.1em 0px 0 2em}
+ul.legendList li{line-height:50px; margin-bottom:15px;}
+ul.legendList li img{display:inline;vertical-align:bottom; margin-right:15px;}
+
+.table-stripe tbody tr:nth-child(odd):hover td,
+.table-stripe tbody tr:nth-child(odd):hover th,
+.ui-table tr:hover{background:#99ccff;}
+.ui-table tr td a{font-size:13px;color:#333;text-decoration:none;}
+.ui-table tr td {font-size:13px;color:#333;text-decoration:none;}
+.ui-table tr td:first-child a{text-decoration:underline;color:#336699;}
+.table-stripe tbody tr:nth-child(odd) td,
+.table-stripe tbody tr:nth-child(odd) th{background:#f0f0f0;}
+
+dl.startend{padding:0 1em 0;overflow:hidden;margin:0}
+dl.startend dt{font-weight:bold;float:left;clear:left;width:7%;padding:0.5em 0 1em 0;}
+dl.startend dd{float:left;clear:right;margin:0 0 0 0.5em;width:90%;position:relative;padding:0.5em 0 1em 0;}
+dl.startend dd a.changeButton{position:absolute;top:28%;right:-10px;}
+dl.startend dt.to,
+dl.startend dd.to{padding-top:0;}
+
+.ui-header .startOverButton.ui-btn{margin:35px 2px 0 0;}
+
+body .ui-overlay-a.ui-popup-screen.in{opacity:0.7;background:#000;}
+body .ui-overlay-a.ui-popup-screen.in{opacity:0.7;background:#000;}
+div.ui-popup{background: #ffffff;}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #000;
+}
+
+.errorMessage {
+    background-color: lightpink;
+    font-style: italic;
+    width:100%;
+}

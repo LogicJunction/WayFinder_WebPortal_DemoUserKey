@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title>Wayfinding Demo</title> 
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="js/vendors/jquery.mobile/jquery.mobile.custom.structure.min.css" />	
+    <script src="js/vendors/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+    <script src="js/vendors/jquery.mobile/jquery.mobile-1.3.0.js"></script>
+    <!--<script src="js/vendors/jquery.mobile/jquery.mobile-1.3.0.min.js"></script>-->
+    <script src="js/vendors/knockout-2.2.1.js"></script>
+    <script src="js/vendors/json2.js"></script>
+    <script src="js/vendors/jquery.debounce-1.0.5.js"></script>
+    <script src="js/vendors/knockout-postbox.js"></script>
+    <script src="js/vendors/d3/d3.v3.min.js"></script>
+    <script src="js/vendors/history/bundled/html4html5/jquery.history.js"></script>
+    <!--<script src="js/vendors/history/uncompressed/history.js"></script>-->
+    <script src="js/lj.svg.js"></script>
+    <script src="js/bindings.knockout.js"></script>
+    <script src="js/autocomplete.knockout.js"></script>
+    <script src="js/destination.knockout.js"></script>
+    <script src="js/printable.knockout.js"></script>
+    <script src="js/ljDirections.knockout.js"></script>
+    <script src="js/campus.knockout.js"></script>
+    <script src="js/client.knockout.js"></script>
+    <script src="js/lookupItem.knockout.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_srKE0wfKrqIWtuzewVKnuJKnnC3mMSQ&libraries=places&sensor=true"> </script>
+    <script src="js/lj.googlemaps.js"></script>
+    <script src="js/lj.main.js"></script>
+
+    <link rel="stylesheet" href="css/app.css" />
+
+
+  </head> 
+  <body id="mainBody" onunload="prepareForRefresh();"> 
+    <link rel="stylesheet" data-bind="attr: {href: clientVM.cssPath}"/>
+    <div data-role="page" data-theme="a" id="home">
+
+      <div data-role="header" class="appHeader">
+        <a href="#" data-bind="click: resetPage" data-role="none" class="logo"><img data-bind="attr:{src: clientVM.imagePath}" alt="Home"></a>
+        <a href="#" data-bind="click: resetPage" class="startOverButton" data-role="button" data-icon="refresh" data-mini="true">Start over</a>
+      </div><!-- /header -->
+
+      <div data-role="content">	
+        <div class="ljContainer">
+
+          <form>
+              Enter your Demo User Key: 
+              <input data-bind="value: demoUserKey" maxlength="6" />
+              <span data-bind="text: errorMessage" class="errorMessage"></span>
+              <button data-bind="click: LogDemoUserKeyUsed" >&gt;</button>
+
+          </form>
+        </div>
+      </div><!-- /content -->
+
+    </div><!-- /page -->
+
+	</div>
+    <script>
+       
+      $(document).delegate( "#home" , "pagecreate", function () {
+        $(".ljContainer").css('background',  '#fff' );
+      });
+
+    </script>
+  </body>
+</html>
+
