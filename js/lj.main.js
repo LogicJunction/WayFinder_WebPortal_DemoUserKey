@@ -19,7 +19,7 @@ function MainViewModel() {
             self.errorMessage("You mis-typed some character(s) in your code.");
             return;
         }
-
+        jQuery.support.cors = true;
         $.ajax(self.LogDemoUserKeyUsedUrl + "?DemoUserKey=" + DemoUserKey)
          .done(function () { window.location.href = self.DemoUrl; });
 
