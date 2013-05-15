@@ -24,7 +24,7 @@ function MainViewModel() {
          .done(function () { window.location.href = self.DemoUrl; });
 
     };
-    self.DemoUrl = "http://wayfindingdemo.azurewebsites.net/";
+    self.DemoUrl = "http://yourhospital.yourdirectroute.com/";
     self.LogDemoUserKeyUsedUrl = "http://wayfinderlj-restservice.cloudapp.net/MobileService.svc/LogDemoUserKeyUsed";
     //self.LogDemoUserKeyUsedUrl = "http://ef76d7d3e6c0436fa4c6c3b4e753c966.cloudapp.net/MobileService.svc/LogDemoUserKeyUsed";
 	self.clientVM = new ClientViewModel();
