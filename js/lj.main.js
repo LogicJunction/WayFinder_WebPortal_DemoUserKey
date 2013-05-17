@@ -20,9 +20,9 @@ function MainViewModel() {
             return;
         }
         jQuery.support.cors = true;
-        $.ajax(self.LogDemoUserKeyUsedUrl + "?DemoUserKey=" + DemoUserKey)
-         .done(function () { window.location.href = self.DemoUrl; });
-
+        $.ajax(self.LogDemoUserKeyUsedUrl + "?DemoUserKey=" + DemoUserKey + "&callback?")
+         .done(function () { window.location.href = self.DemoUrl; })
+         .fail(function (jqXHR, textStatus, errorThrown) { self.errorMessage(errorThrown); })
     };
     self.DemoUrl = "http://yourhospital.yourdirectroute.com/";
     self.LogDemoUserKeyUsedUrl = "http://wayfinderlj-restservice.cloudapp.net/MobileService.svc/LogDemoUserKeyUsed";
