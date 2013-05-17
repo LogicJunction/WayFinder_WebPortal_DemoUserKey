@@ -20,7 +20,11 @@ function MainViewModel() {
             return;
         }
         jQuery.support.cors = true;
-        $.ajax(self.LogDemoUserKeyUsedUrl + "?DemoUserKey=" + DemoUserKey + "&callback?")
+        $.ajax({
+            url: self.LogDemoUserKeyUsedUrl + "?DemoUserKey=" + DemoUserKey,
+            type: "GET",
+            dataType: 'jsonp'
+        })
          .done(function () { window.location.href = self.DemoUrl; })
          .fail(function (jqXHR, textStatus, errorThrown) { self.errorMessage(errorThrown); })
     };
